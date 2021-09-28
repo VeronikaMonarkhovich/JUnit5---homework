@@ -23,7 +23,7 @@ public class KinopoiskTest {
         Configuration.startMaximized = true;
         Selenide.open(KinopoiskPage.URL);
         page.doSearch("Бойцовский клуб")
-                .switchToMenuItem(menuItem);
+                .switchToMenuItem(menuItem).checkResults("Бойцовский клуб");
     }
 
     @CsvSource({
