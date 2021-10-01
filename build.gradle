@@ -6,8 +6,8 @@ repositories {
     mavenCentral()
 }
 
-def selenideVersion = "5.24.3",
-    junitVersion = "5.8.0"
+def selenideVersion = '5.24.4',
+    junitVersion = '5.8.1'
 
 dependencies {
     testImplementation(
