@@ -12,7 +12,7 @@ import org.junit.jupiter.params.provider.EnumSource;
 import org.junit.jupiter.params.provider.MethodSource;
 import java.util.stream.Stream;
 
-public class KinopoiskTest {
+public class KinopoiskTest extends TestBase {
 
     private KinopoiskPage page = new KinopoiskPage();
     private KinopoiskResultsPage film = new KinopoiskResultsPage();
