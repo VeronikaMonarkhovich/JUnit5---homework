@@ -8,7 +8,7 @@
     "base": {
       "lang": "en",
       "messenger": "telegram",
-      "allureFolder": "/tmp/810455830172601739/allure-report/",
+      "allureFolder": "allure-report/",
       "allureLinkPath": "allure",
       "chart": true,
       "chartName": "",
