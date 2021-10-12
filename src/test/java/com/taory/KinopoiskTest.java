@@ -20,7 +20,6 @@ public class KinopoiskTest extends TestBase {
     @EnumSource(MenuItems.class)
     @ParameterizedTest(name = "Check  search result  for menu items {0}")
     public void checkSearchResultForSeveralMenuItems(MenuItems menuItem) {
-        Configuration.startMaximized = true;
         Selenide.open(KinopoiskPage.URL);
         page.doSearch("Бойцовский клуб")
                 .switchToMenuItem(menuItem).checkResults("Бойцовский клуб");
@@ -33,7 +32,6 @@ public class KinopoiskTest extends TestBase {
 
     @ParameterizedTest(name = "Check search results for input string: {0}")
     void testWithName(String searchQuery) {
-        Configuration.startMaximized = true;
         Selenide.open(KinopoiskPage.URL);
         page.doSearch(searchQuery).checkResults(searchQuery);
     }
@@ -52,7 +50,6 @@ public class KinopoiskTest extends TestBase {
     @MethodSource("checkResultParams")
     @ParameterizedTest(name = "Check result params of films")
     void checkResultParams(String name, String year, String director) {
-        Configuration.startMaximized = true;
         Selenide.open(KinopoiskPage.URL);
         page.doSearch(name).clickResult(name);
         film.checkParams(name, year, director);
